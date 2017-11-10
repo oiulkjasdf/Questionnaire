@@ -78,7 +78,7 @@
     login.onclick = function(){
         var username = document.getElementsByTagName("input")[0].value;
         var password = encode64(document.getElementsByTagName("input")[1].value);
-        $.post("/Questionnaire/loginCheck.action",{username:username,password:password},function(data,dataStatus){
+        $.post("/loginCheck.action",{username:username,password:password},function(data,dataStatus){
             if(data=="wrong"){
                 alert("Wrong Account！");
             }else{
